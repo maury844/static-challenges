@@ -1,0 +1,124 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+h1 {
+  color: #333;
+}
+
+input {
+  padding: 10px;
+  margin-right: 5px;
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #fff;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Add this to the existing styles.css */
+
+.left-menu {
+  background-color: #6930c3;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.left-menu button {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #9c88ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.left-menu button:hover {
+  background-color: #7e57c2;
+}
+
+.main-content {
+  padding: 16px;
+}
+
+.centered-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+#move-button {
+  z-index: 99;
+  padding: 15px; /* Increase button padding for a larger size */
+  font-size: 22px; /* Increase font size */
+  background-color: #8e44ad; /* Change button color to a purple shade */
+  color: #fff;
+  border: 2px solid #6e349d; /* Add a slightly darker border */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+  background-image: linear-gradient(
+    to right,
+    violet,
+    indigo,
+    blue,
+    green,
+    orange,
+    red
+  ); /* Add rainbow-colored letters */
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#yes-button {
+  margin-bottom: 16px;
+  font-size: 22px; /* Increase font size */
+  background-color: #8e44ad; /* Change button color to a purple shade */
+  color: #fff;
+  border: 2px solid #6e349d; /* Add a slightly darker border */
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #6c3483; /* Change hover color for a clearer shade */
+  }
+}
+
+#confetti {
+  width: 0px;
+  height: 0px;
+}

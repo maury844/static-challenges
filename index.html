@@ -1,0 +1,31 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Challenge</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-menu">
+        <button onclick="navigateTo('index.html')">Challenge #1</button>
+        <!-- <button onclick="navigateTo('about.html')">About</button> -->
+      </div>
+      <div class="main-content w-100">
+        <div class="centered-content w-100">
+          <h1>Me Per🍩🍩</h1>
+          <button id="yes-button" onclick="triggerConfetti()">Si</button>
+          <button id="move-button" onmouseover="moveButtonRandomOverlap()">
+            NOT IN THIS LIFE
+          </button>
+
+          <ul id="taskList"></ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -59,15 +59,23 @@ function moveButtonRandomOverlap() {
   } while (overlap);
 }
 
-function triggerConfetti() {
+function choose(choices) {
+  var index = Math.floor(Math.random() * choices.length);
+  return choices[index];
+}
+
+async function triggerConfetti() {
   if (!jsConfetti) {
     jsConfetti = new JSConfetti();
   }
 
-  jsConfetti.addConfetti();
-  setTimeout(() => {
-    alert('Has perdonado al Ingeniero mas guapo');
-  }, 3000);
+  const params = {
+    emojis: ['🦄', '🌈', '⚡️', '✨', '💫', '🌸', '🖤'],
+    emojiSize: 30,
+    confettiNumber: 150,
+  };
+
+  await jsConfetti.addConfetti(choose([params, {}]));
 }
 function navigateTo(page) {
   window.location.href = page;

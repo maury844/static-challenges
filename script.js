@@ -2,7 +2,7 @@ const canvas = document.querySelector('#confetti');
 var jsConfetti;
 
 function moveButtonRandom() {
-  const moveButton = document.getElementById('moveButton');
+  const moveButton = document.getElementById('move-button');
   const mainContent = document.querySelector('.main-content');
 
   const margin = 60; // Set your desired safe margin
@@ -31,8 +31,8 @@ function moveButtonRandomOverlap() {
   let initialX = mainContent.getBoundingClientRect().left;
   const initialY = mainContent.getBoundingClientRect().top;
 
-  // Check for overlapping with the "Add Task" button
-  const addTaskButton = document.getElementById('addTaskButton');
+  // Check for overlapping with the "Yes" button
+  const yesButton = document.getElementById('yes-button');
 
   let overlap = false;
   do {
@@ -45,14 +45,14 @@ function moveButtonRandomOverlap() {
     moveButton.style.top = `${randomY}px`;
 
     // Check for overlapping with the "Add Task" button
-    const addTaskButtonRect = addTaskButton.getBoundingClientRect();
+    const yesButtonRect = yesButton.getBoundingClientRect();
     const moveButtonRect = moveButton.getBoundingClientRect();
 
     if (
-      moveButtonRect.left < addTaskButtonRect.right &&
-      moveButtonRect.right > addTaskButtonRect.left &&
-      moveButtonRect.top < addTaskButtonRect.bottom &&
-      moveButtonRect.bottom > addTaskButtonRect.top
+      moveButtonRect.left < yesButtonRect.right &&
+      moveButtonRect.right > yesButtonRect.left &&
+      moveButtonRect.top < yesButtonRect.bottom &&
+      moveButtonRect.bottom > yesButtonRect.top
     ) {
       overlap = true;
     }
@@ -65,6 +65,9 @@ function triggerConfetti() {
   }
 
   jsConfetti.addConfetti();
+  setTimeout(() => {
+    alert('Has perdonado al Ingeniero mas guapo');
+  }, 3000);
 }
 function navigateTo(page) {
   window.location.href = page;

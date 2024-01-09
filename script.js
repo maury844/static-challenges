@@ -1,5 +1,27 @@
 const canvas = document.querySelector('#confetti');
 var jsConfetti;
+const alternativeLabels = [
+  "Not in this life",
+  "Absolutely not",
+  "Nope",
+  "Negative",
+  "Never",
+  "Nuh-uh",
+  "Not a chance",
+  "Forget it",
+  "No way",
+  "Certainly not",
+  "Decline",
+  "Definitely no",
+  "I disagree",
+  "Impossible",
+  "Under no circumstances",
+  "Not at all",
+  "Hard pass",
+  "I dissent",
+  "No thanks",
+  "Absolutely no way"
+];
 
 function moveButtonRandom() {
   const moveButton = document.getElementById('move-button');
@@ -57,6 +79,9 @@ function moveButtonRandomOverlap() {
       overlap = true;
     }
   } while (overlap);
+
+  const label = choose(alternativeLabels);
+  moveButton.innerHTML = label.toUpperCase();
 }
 
 function choose(choices) {
